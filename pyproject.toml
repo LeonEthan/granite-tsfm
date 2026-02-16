@@ -1,18 +1,21 @@
 [build-system]
-requires = ["setuptools>=78.1.1", "wheel", "Cython", "setuptools-scm>=8.0"]
+requires = ["setuptools>=78.1.1", "wheel", "Cython"]
 
 [project]
-name = "granite-tsfm"
+name = "taagentkit-granite-tsfm"
 requires-python = ">=3.11,<3.14"
-# version = "0.0.1"
-dynamic = ["version"]
+version = "1.0.0"
 authors = [{ name = "IBM" }]
 description = "Public notebooks and utilities for TSFM"
 readme = "README.md"
 license = { file = "LICENSE" }
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
 dependencies = [
@@ -35,7 +38,7 @@ packages = ["tsfm_public", "tsfmhfdemos"]
 [project.optional-dependencies]
 
 
-all = ["granite-tsfm[notebooks,testing,dev]"]
+all = ["taagentkit-granite-tsfm[notebooks,testing,dev]"]
 
 notebooks = [
     "jupyter",
@@ -49,16 +52,16 @@ notebooks = [
 testing = [
     "pytest",
     "pytest-coverage",
-    "granite-tsfm[notebooks]",
+    "taagentkit-granite-tsfm[notebooks]",
     "parameterized",
 ]
-dev = ["granite-tsfm[testing]", "ruff==0.5.7"]
+dev = ["taagentkit-granite-tsfm[testing]", "ruff==0.5.7"]
 
 # ogv deployments will already have jupyter
 # and we don't want to mess with RH's tested version
 ogv = ["datasets", "plotly", "kaleido"]
 demos = [
-    "granite-tsfm[notebooks]",
+    "taagentkit-granite-tsfm[notebooks]",
     "streamlit",
     "altair<5",
     "plotly",
@@ -67,10 +70,6 @@ demos = [
     "toml",
 ]
 # ###################################################
-
-
-[tool.setuptools_scm]
-version_file = "tsfm_public/_version.py"
 
 [tool.ruff]
 

@@ -14,12 +14,12 @@ dependencies = [
   "uvicorn-worker",
   "prometheus_client",
   "psutil",
-  "granite-tsfm",
+  "taagentkit-granite-tsfm",
   "datasets>=4.5", # with python3.12 this gets back versioned without this for some reason
   ]
 
 [tool.uv.sources]
-granite-tsfm = { git = "https://github.com/ibm-granite/granite-tsfm.git", branch = "destiny" }
+taagentkit-granite-tsfm = { workspace = true }
 
 [project.optional-dependencies]
 dev = [

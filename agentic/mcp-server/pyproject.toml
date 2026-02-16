@@ -5,10 +5,10 @@ description = "A MCP server for TSFM capabilities"
 readme = "README.md"
 requires-python = ">=3.9, <3.13"
 dependencies = [
-    "granite-tsfm",
+    "taagentkit-granite-tsfm",
     "tsfminference"
 ]
 
 [tool.uv.sources]
-granite-tsfm = { workspace = true }
+taagentkit-granite-tsfm = { workspace = true }
 tsfminference= { workspace = true }
