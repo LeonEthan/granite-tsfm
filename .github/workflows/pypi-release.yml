@@ -48,7 +48,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     environment:
       name: pypi
-      url: https://pypi.org/p/taagentkit-granite-tsfm
+      url: https://pypi.org/p/tsagentkit-patchtst-fm
     permissions:
       id-token: write
 

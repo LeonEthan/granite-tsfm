@@ -14,7 +14,7 @@ dependencies = [
   "uvicorn-worker",
   "prometheus_client",
   "psutil",
-  "taagentkit-granite-tsfm",
+  "tsagentkit-patchtst-fm",
   "datasets>=4.5", # with python3.12 this gets back versioned without this for some reason
   ]
 

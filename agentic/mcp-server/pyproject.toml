@@ -5,7 +5,7 @@ description = "A MCP server for TSFM capabilities"
 readme = "README.md"
 requires-python = ">=3.9, <3.13"
 dependencies = [
-    "taagentkit-granite-tsfm",
+    "tsagentkit-patchtst-fm",
     "tsfminference"
 ]
 
