@@ -3584,7 +3584,7 @@ wheels = [
 
 [[package]]
 name = "tsagentkit-patchtst-fm"
-version = "1.0.1"
+version = "1.0.2"
 source = { editable = "." }
 dependencies = [
     { name = "datasets" },
