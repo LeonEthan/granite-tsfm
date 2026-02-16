@@ -19,7 +19,7 @@ dependencies = [
   ]
 
 [tool.uv.sources]
-taagentkit-granite-tsfm = { workspace = true }
+tsagentkit-patchtst-fm = { workspace = true }
 
 [project.optional-dependencies]
 dev = [
@@ -46,5 +46,3 @@ include = ["tsfminference"]
 [build-system]
 requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
-
-

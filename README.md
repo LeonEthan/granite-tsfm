@@ -5,7 +5,20 @@ The core TSFM time series models have been made available on Hugging Face -- det
 [here](https://github.com/ibm-granite/granite-tsfm/wiki). Information on the services component can be found [here](https://github.com/ibm-granite/granite-tsfm/blob/main/services/inference/README.md).
 
 ## Python Version
-The current Python versions supported are 3.10, 3.11, 3.12, 3.13.
+The current Python versions supported are 3.11, 3.12, 3.13.
+
+## Install From PyPI
+Install the package directly from PyPI:
+
+```bash
+pip install tsagentkit-patchtst-fm
+```
+
+For notebook extras:
+
+```bash
+pip install "tsagentkit-patchtst-fm[notebooks]"
+```
 
 ## Initial Setup
 First clone the repository:

@@ -1,17 +1,17 @@
 [build-system]
 requires = ["setuptools>=78.1.1", "wheel", "Cython"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "tsagentkit-patchtst-fm"
 requires-python = ">=3.11,<3.14"
-version = "1.0.0"
+version = "1.0.1"
 authors = [{ name = "IBM" }]
-description = "Public notebooks and utilities for TSFM"
+description = "Granite TSFM toolkit, model wrappers, and demos for time-series forecasting workflows."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "Apache-2.0"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
-    "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -19,21 +19,31 @@ classifiers = [
 ]
 
 dependencies = [
-    "pandas>=2.2.0",
-    "scikit-learn",
+    "pandas>=2.2.0,<3",
+    "scikit-learn<1.8",
     "transformers[torch]==4.56.0",
     "datasets",
     "deprecated",
     "urllib3>=1.26.19",            # see https://github.com/urllib3/urllib3/security/advisories/GHSA-34jh-p97f-mpxf
     "numpy<3",
     "torch<2.9",
-    "scikit-learn<1.8",
-    "pandas<3",
     "filelock>=3.20.3"
 ]
 
+[project.urls]
+Homepage = "https://github.com/ibm-granite/granite-tsfm"
+Repository = "https://github.com/ibm-granite/granite-tsfm"
+Documentation = "https://github.com/ibm-granite/granite-tsfm/wiki"
+
 [tool.setuptools]
-packages = ["tsfm_public", "tsfmhfdemos"]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["tsfm_public*", "tsfmhfdemos*"]
+
+[tool.setuptools.package-data]
+tsfm_public = ["resources/**/*.yaml", "models/**/*.png", "models/**/*.webp", "models/**/*.md"]
+tsfmhfdemos = ["neurips/**/*.toml", "neurips/**/*.png", "neurips/**/*.md"]
 
 [project.optional-dependencies]
 
@@ -99,5 +109,3 @@ skip-magic-trailing-comma = false
 
 # Like Black, automatically detect the appropriate line ending.
 line-ending = "auto"
-
-
